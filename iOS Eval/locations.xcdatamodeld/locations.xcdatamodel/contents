@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Business" representedClassName="Business">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pos_redeem" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="retid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="retname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondaryname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitter_acc" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="functions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Function" inverseName="parentBusiness" inverseEntity="Function" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Function" representedClassName="Function" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parentBusiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="functions" inverseEntity="Business" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Business" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Function" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
