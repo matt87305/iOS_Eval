@@ -18,4 +18,6 @@
 @property (nonatomic, retain) NSString * info;
 @property (nonatomic, retain) Business *parentBusiness;
 
+- (NSString *)functionReadableName;
+
 @end

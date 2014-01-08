@@ -17,4 +17,29 @@
 @dynamic info;
 @dynamic parentBusiness;
 
+- (NSString *)functionReadableName
+{
+    if ([self.name isEqualToString:@"gallery"])
+    {
+        return @"Photo Gallery";
+    }
+    else if ([self.name isEqualToString:@"locations"])
+    {
+        return @"Business Info";
+    }
+    else if ([self.name isEqualToString:@"latestNews"])
+    {
+        return @"Latest News";
+    }
+    else if ([self.name isEqualToString:@"unlockRewards"])
+    {
+        return @"How to Unlock Rewards Here";
+    }
+    else if ([self.name isEqualToString:@"directions"])
+    {
+        return @"Get Directions";
+    }
+    return self.name;
+}
+
 @end

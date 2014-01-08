@@ -147,32 +147,15 @@
     {
         MGRFunctionCell *functionCell = [tableView dequeueReusableCellWithIdentifier:functionCellIdentifier];
         Function *function = [self.functionsArray objectAtIndex:(indexPath.row - 2)];
-        NSString *functionReadableName = @"";
         functionCell.functionAccessoryLabel.hidden = YES;
-        if ([function.name isEqualToString:@"gallery"])
+        
+      
+        if ([function.name isEqualToString:@"latestNews"])
         {
-            functionReadableName = @"Photo Gallery";
-        }
-        else if ([function.name isEqualToString:@"locations"])
-        {
-            functionReadableName = @"Business Info";
-        }
-        else if ([function.name isEqualToString:@"latestNews"])
-        {
-            functionReadableName = @"Latest News";
             functionCell.functionAccessoryLabel.hidden = NO;
         }
-        else if ([function.name isEqualToString:@"unlockRewards"])
-        {
-            functionReadableName = @"How to Unlock Rewards Here";
-        }
-        else if ([function.name isEqualToString:@"directions"])
-        {
-            functionReadableName = @"Get Directions";
-        }
         
-        
-        functionCell.functionTitleLabel.text = functionReadableName;
+        functionCell.functionTitleLabel.text = [function functionReadableName];
         
         cellToReturn = functionCell;
     }
