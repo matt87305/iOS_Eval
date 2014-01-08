@@ -14,10 +14,10 @@
 @interface Function : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * readableName;
 @property (nonatomic, retain) NSNumber * active;
 @property (nonatomic, retain) NSString * info;
 @property (nonatomic, retain) Business *parentBusiness;
 
-- (NSString *)functionReadableName;
 
 @end

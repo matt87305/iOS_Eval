@@ -16,6 +16,12 @@
 @dynamic active;
 @dynamic info;
 @dynamic parentBusiness;
+@dynamic readableName;
+
+- (void)awakeFromFetch
+{
+    self.readableName = [self functionReadableName];
+}
 
 - (NSString *)functionReadableName
 {

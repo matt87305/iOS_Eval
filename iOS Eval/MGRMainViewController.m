@@ -155,7 +155,7 @@
             functionCell.functionAccessoryLabel.hidden = NO;
         }
         
-        functionCell.functionTitleLabel.text = [function functionReadableName];
+        functionCell.functionTitleLabel.text = function.readableName;
         
         cellToReturn = functionCell;
     }

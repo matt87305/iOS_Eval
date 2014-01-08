@@ -14,6 +14,7 @@
         <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readableName" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
         <relationship name="parentBusiness" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="functions" inverseEntity="Business" syncable="YES"/>
     </entity>
     <elements>
